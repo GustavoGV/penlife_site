@@ -1,0 +1,331 @@
+[
+  {
+    "Código Produto": "PEN-00001",
+    "Código Integração": "I-00001",
+    "Descrição": "Alfinete Taça",
+    "Unidade": "CX",
+    "NCM": "7319.40.00"
+  },
+  {
+    "Código Produto": "PEN-00002",
+    "Código Integração": "I-00002",
+    "Descrição": "Caixa de Clipes",
+    "Unidade": "CX",
+    "NCM": "8305.90.00"
+  },
+  {
+    "Código Produto": "PEN-00003",
+    "Código Integração": "I-00003",
+    "Descrição": "Caixa de Grampo",
+    "Unidade": "CX",
+    "NCM": "8305.20.00"
+  },
+  {
+    "Código Produto": "PEN-00004",
+    "Código Integração": "I-00004",
+    "Descrição": "Caneta Esferográfica",
+    "Unidade": "UN",
+    "NCM": "9608.10.00"
+  },
+  {
+    "Código Produto": "PEN-00005",
+    "Código Integração": "I-00005",
+    "Descrição": "Copo de Café",
+    "Unidade": "UN",
+    "NCM": "3924.10.00"
+  },
+  {
+    "Código Produto": "PEN-00006",
+    "Código Integração": "I-00006",
+    "Descrição": "Copo Plástico",
+    "Unidade": "UN",
+    "NCM": "3924.10.00"
+  },
+  {
+    "Código Produto": "PEN-00007",
+    "Código Integração": "I-00007",
+    "Descrição": "Corretivo",
+    "Unidade": "UN",
+    "NCM": "3215.90.00"
+  },
+  {
+    "Código Produto": "PEN-00008",
+    "Código Integração": "I-00008",
+    "Descrição": "Elástico de Borracha",
+    "Unidade": "PCT",
+    "NCM": "4016.99.90"
+  },
+  {
+    "Código Produto": "PEN-00009",
+    "Código Integração": "I-00009",
+    "Descrição": "Envelope Plástico A4",
+    "Unidade": "PCT",
+    "NCM": "3923.29.90"
+  },
+  {
+    "Código Produto": "PEN-00010",
+    "Código Integração": "I-00010",
+    "Descrição": "Estilete",
+    "Unidade": "UN",
+    "NCM": "8211.93.90"
+  },
+  {
+    "Código Produto": "PEN-00011",
+    "Código Integração": "I-00011",
+    "Descrição": "Filtro de Linha",
+    "Unidade": "UN",
+    "NCM": "8536.30.00"
+  },
+  {
+    "Código Produto": "PEN-00012",
+    "Código Integração": "I-00012",
+    "Descrição": "Fita Adesiva Durex",
+    "Unidade": "PC",
+    "NCM": "3919.90.10"
+  },
+  {
+    "Código Produto": "PEN-00013",
+    "Código Integração": "I-00013",
+    "Descrição": "Grampeador",
+    "Unidade": "PC",
+    "NCM": "8472.90.40"
+  },
+  {
+    "Código Produto": "PEN-00014",
+    "Código Integração": "I-00014",
+    "Descrição": "Marca Texto",
+    "Unidade": "UN",
+    "NCM": "9608.20.00"
+  },
+  {
+    "Código Produto": "PEN-00015",
+    "Código Integração": "I-00015",
+    "Descrição": "Marcador de Página",
+    "Unidade": "PCT",
+    "NCM": "4820.10.00"
+  },
+  {
+    "Código Produto": "PEN-00016",
+    "Código Integração": "I-00016",
+    "Descrição": "Pacote Grampo Trilho Plástico",
+    "Unidade": "PCT",
+    "NCM": "8305.20.00"
+  },
+  {
+    "Código Produto": "PEN-00017",
+    "Código Integração": "I-00017",
+    "Descrição": "Papel Sulfite",
+    "Unidade": "PCT",
+    "NCM": "4802.56.10"
+  },
+  {
+    "Código Produto": "PEN-00018",
+    "Código Integração": "I-00018",
+    "Descrição": "Pasta Suspensa Kraft",
+    "Unidade": "CX",
+    "NCM": "4820.90.00"
+  },
+  {
+    "Código Produto": "PEN-00019",
+    "Código Integração": "I-00019",
+    "Descrição": "Perfurador de Papel",
+    "Unidade": "PC",
+    "NCM": "8472.90.40"
+  },
+  {
+    "Código Produto": "PEN-00020",
+    "Código Integração": "I-00020",
+    "Descrição": "Post-it",
+    "Unidade": "PCT",
+    "NCM": "4820.10.00"
+  },
+  {
+    "Código Produto": "PEN-00021",
+    "Código Integração": "I-00021",
+    "Descrição": "Régua",
+    "Unidade": "PC",
+    "NCM": "9017.20.00"
+  },
+  {
+    "Código Produto": "PEN-00022",
+    "Código Integração": "I-00022",
+    "Descrição": "Suporte para Durex",
+    "Unidade": "UN",
+    "NCM": "3926.10.00"
+  },
+  {
+    "Código Produto": "PEN-00023",
+    "Código Integração": "I-00023",
+    "Descrição": "Tesoura",
+    "Unidade": "PC",
+    "NCM": "8213.00.00"
+  },
+  {
+    "Código Produto": "PEN-00024",
+    "Código Integração": "I-00024",
+    "Descrição": "Tinta Impressora",
+    "Unidade": "UN",
+    "NCM": "8473.30.27"
+  },
+  {
+    "Código Produto": "PEN-00025",
+    "Código Integração": "I-00025",
+    "Descrição": "Água Sanitária",
+    "Unidade": "UN",
+    "NCM": "2828.90.11"
+  },
+  {
+    "Código Produto": "PEN-00026",
+    "Código Integração": "I-00026",
+    "Descrição": "Álcool em Gel",
+    "Unidade": "UN",
+    "NCM": "2207.20.19"
+  },
+  {
+    "Código Produto": "PEN-00027",
+    "Código Integração": "I-00027",
+    "Descrição": "Álcool Etílico",
+    "Unidade": "UN",
+    "NCM": "2207.20.10"
+  },
+  {
+    "Código Produto": "PEN-00028",
+    "Código Integração": "I-00028",
+    "Descrição": "Aromatizador de Ambiente",
+    "Unidade": "UN",
+    "NCM": "3307.49.00"
+  },
+  {
+    "Código Produto": "PEN-00029",
+    "Código Integração": "I-00029",
+    "Descrição": "Balde",
+    "Unidade": "UN",
+    "NCM": "3926.90.90"
+  },
+  {
+    "Código Produto": "PEN-00030",
+    "Código Integração": "I-00030",
+    "Descrição": "Cloro",
+    "Unidade": "UN",
+    "NCM": "2828.90.11"
+  },
+  {
+    "Código Produto": "PEN-00005",
+    "Código Integração": "I-00005",
+    "Descrição": "Copo de Café",
+    "Unidade": "UN",
+    "NCM": "3924.10.00"
+  },
+  {
+    "Código Produto": "PEN-00006",
+    "Código Integração": "I-00006",
+    "Descrição": "Copo Plástico",
+    "Unidade": "UN",
+    "NCM": "3924.10.00"
+  },
+  {
+    "Código Produto": "PEN-00031",
+    "Código Integração": "I-00031",
+    "Descrição": "Desinfetante",
+    "Unidade": "UN",
+    "NCM": "3808.94.19"
+  },
+  {
+    "Código Produto": "PEN-00032",
+    "Código Integração": "I-00032",
+    "Descrição": "Desodorizador Sanitário",
+    "Unidade": "UN",
+    "NCM": "3307.49.00"
+  },
+  {
+    "Código Produto": "PEN-00033",
+    "Código Integração": "I-00033",
+    "Descrição": "Limpa Pisos",
+    "Unidade": "UN",
+    "NCM": "3402.11.90"
+  },
+  {
+    "Código Produto": "PEN-00034",
+    "Código Integração": "I-00034",
+    "Descrição": "Limpa Vidros",
+    "Unidade": "UN",
+    "NCM": "3402.90.39"
+  },
+  {
+    "Código Produto": "PEN-00035",
+    "Código Integração": "I-00035",
+    "Descrição": "Limpador Sanitário",
+    "Unidade": "UN",
+    "NCM": "3402.20.00"
+  },
+  {
+    "Código Produto": "PEN-00036",
+    "Código Integração": "I-00036",
+    "Descrição": "Lustra Móveis",
+    "Unidade": "UN",
+    "NCM": "3405.20.00"
+  },
+  {
+    "Código Produto": "PEN-00037",
+    "Código Integração": "I-00037",
+    "Descrição": "Luva para Limpeza",
+    "Unidade": "UN",
+    "NCM": "4015.19.00"
+  },
+  {
+    "Código Produto": "PEN-00038",
+    "Código Integração": "I-00038",
+    "Descrição": "Pá de Lixo",
+    "Unidade": "UN",
+    "NCM": "3924.90.00"
+  },
+  {
+    "Código Produto": "PEN-00039",
+    "Código Integração": "I-00039",
+    "Descrição": "Pano de Chão",
+    "Unidade": "UN",
+    "NCM": "6307.10.00"
+  },
+  {
+    "Código Produto": "PEN-00040",
+    "Código Integração": "I-00040",
+    "Descrição": "Pano de Limpeza",
+    "Unidade": "UN",
+    "NCM": "6307.10.00"
+  },
+  {
+    "Código Produto": "PEN-00041",
+    "Código Integração": "I-00041",
+    "Descrição": "Rodo",
+    "Unidade": "UN",
+    "NCM": "9603.90.00"
+  },
+  {
+    "Código Produto": "PEN-00042",
+    "Código Integração": "I-00042",
+    "Descrição": "Sabonete Espuma",
+    "Unidade": "UN",
+    "NCM": "3401.30.00"
+  },
+  {
+    "Código Produto": "PEN-00043",
+    "Código Integração": "I-00043",
+    "Descrição": "Sabonete Líquido",
+    "Unidade": "UN",
+    "NCM": "3401.30.00"
+  },
+  {
+    "Código Produto": "PEN-00044",
+    "Código Integração": "I-00044",
+    "Descrição": "Saco de Lixo",
+    "Unidade": "UN",
+    "NCM": "3923.21.90"
+  },
+  {
+    "Código Produto": "PEN-00045",
+    "Código Integração": "I-00045",
+    "Descrição": "Vassoura",
+    "Unidade": "UN",
+    "NCM": "9603.10.00"
+  }
+]

@@ -1,15 +1,17 @@
 import { Input, Row, Col, Form, Button, Cascader, Select, Tooltip, Space, Typography, Menu, Dropdown } from "antd";
-import { useState } from "react";
 
 const { Option } = Select;
 
 export default function Body () {
-    const [name, setName] = useState('');
+    function handleFinish (a) {
+        console.log(a)
+    }
     
     return <>
     
     <Form
         layout="vertical"
+        onFinish={handleFinish}
     >
         <Row>
             <Col span={12}
