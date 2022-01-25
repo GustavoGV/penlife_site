@@ -1,18 +1,47 @@
+.ant-layout, .ant-layout * {
+    box-sizing: content-box;
+  }
+
+.ant-select-arrow {
+display: inline-block;
+color: inherit;
+font-style: normal;
+line-height: 0;
+text-transform: none;
+vertical-align: -0.125em;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+position: absolute;
+top: 50%;
+left: 520px;
+width: 12px;
+height: 12px;
+margin-top: -6px;
+color: rgba(0, 0, 0, 0.25);
+font-size: 12px;
+line-height: 1;
+text-align: center;
+pointer-events: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+  }
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
+.ant-form-vertical .ant-form-item-label, .ant-col-24.ant-form-item-label, .ant-col-xl-24.ant-form-item-label {
+    padding: 0 0 8px;
+    line-height: 1.5715;
+    white-space: initial;
+    text-align: left;
+  }

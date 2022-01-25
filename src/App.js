@@ -5,8 +5,6 @@ import {
 import { useState } from 'react';
 import './App.css'
 import Body from './basicinfo';
-import SearchBar from './SearchBar';
-import ProductData from './products.json'
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -27,7 +25,6 @@ function App () {
             <Content style={{ margin: '0 16px' }}>
                 <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
                     <Body />
-                    <SearchBar placeholder="Insira um produto..." data={ProductData}/>
                 </div>
             </Content>
         <Footer style={{ textAlign: 'center' }}>PEN Life International School ©2022</Footer>

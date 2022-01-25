@@ -1,4 +1,6 @@
 import { Input, Row, Col, Form, Button, Cascader } from "antd";
+import SearchBar from './SearchBar';
+import ProductData from './products.json'
 
 export default function Body () {
     function handleFinish (a) {
@@ -86,14 +88,18 @@ export default function Body () {
             </Col>
         </Row>
         
-        <Row>
-            <Col push={6}>
+        <Row justify="center">
+            <Col>
                 <Button type="primary" htmlType="submit">
                 Enviar
                 </Button>
             </Col>
         </Row>
-        
+        <Row justify="center">
+            <Col>
+                <SearchBar placeholder="Insira um produto..." data={ProductData}/>            
+            </Col>
+        </Row> 
     </Form>
     </>
 }

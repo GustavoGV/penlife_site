@@ -1,14 +1,17 @@
 .searchInputs {
-  margin-top: 100px;
+  margin-top: 105px;
   display: flex;
 }
 
 .search input {
   background-color: white;
   border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   font-size: 18px;
   padding: 15px;
-  height: 60px;
+  height: 30px;
   width: 300px;
 }
 
@@ -16,7 +19,6 @@
   height: 60px;
   width: 50px;
   background-color: white;
-  color:#001529;
   display: grid;
   place-items: center;
 }
@@ -27,6 +29,7 @@ input:focus {
 .searchIcon svg {
   font-size: 35px;
 }
+
 .dataResult {
   margin-top: 5px;
   width: 300px;
@@ -37,7 +40,7 @@ input:focus {
   overflow-y: auto;
 }
 
-.dataResult::-webkit-slider-thumb {
+.dataResult::-webkit-scrollbar {
   display: none;
 }
 

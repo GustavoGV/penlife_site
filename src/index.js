@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import 'antd/dist/antd.css'
-import { ConfigProvider } from 'antd'
-import ptBR from 'antd/lib/locale/pt_BR'
+import reportWebVitals from "./reportWebVitals";
+import './index.css'
 
 ReactDOM.render(
-    <ConfigProvider locale={ptBR}>
-      <App />
-    </ConfigProvider>,
-  document.getElementById('root')
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
 );
+
+reportWebVitals();
