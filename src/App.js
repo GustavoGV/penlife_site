@@ -1,15 +1,14 @@
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu } from 'antd';
 import {
   UserOutlined,
 } from '@ant-design/icons';
 import { useState } from 'react';
 import './App.css'
 import Body from './basicinfo';
-import SearchBar from './searchbar';
+import SearchBar from './SearchBar';
 import ProductData from './products.json'
 
 const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
 
 function App () {
     const [collapsed, setCollapsed] = useState(false);

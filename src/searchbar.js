@@ -1,54 +1,47 @@
 import React, { useState } from "react";
-import "./searchbar.css";
-import {
-    CloseOutlined, SearchOutlined
-  } from '@ant-design/icons';
+import "./SearchBar.css";
+import SearchIcon from '@mui/icons-material/Search';
+import CloseIcon from '@mui/icons-material/Close';
 
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
-  const [wordEntered, setWordEntered] = useState("");
+  const [wordEntered, setWordEntered] = useState([]);
 
   const handleFilter = (event) => {
-    const searchWord = event.target.value;
-    setWordEntered(searchWord);
+    const searchWord = event.target.value
+    setWordEntered(searchWord)
     const newFilter = data.filter((value) => {
-      return value.Descrição.toLowerCase().includes(searchWord.toLowerCase());
+      return value.Descricao.toLowerCase().includes(searchWord.toLowerCase());
     });
 
-    if (searchWord === "") {
-      setFilteredData([]);
+    if (searchWord ==="") {
+      setFilteredData([])
     } else {
       setFilteredData(newFilter);
-    }
-  };
-
+    };
+  };  
   const clearInput = () => {
-    setFilteredData([]);
-    setWordEntered("");
-  };
-
+     setFilteredData([]);
+    };
+  
   return (
     <div className="search">
       <div className="searchInputs">
-        <input
-          type="text"
-          placeholder={placeholder}
-          value={wordEntered}
-          onChange={handleFilter}
-        />
+        <input type="text" placeholder={placeholder} value={wordEntered} onChange={handleFilter} />
         <div className="searchIcon">
           {filteredData.length === 0 ? (
-            <SearchOutlined />
+          <SearchIcon /> 
           ) : (
-            <CloseOutlined id="clearBtn" onClick={clearInput} />
+          <CloseIcon id="clearbtn" onClick={clearInput} />
           )}
-        </div>
       </div>
-      {filteredData.length != 0 && (
-        <div className="dataResult">
-          {filteredData.slice(0, 15).map((value, key) => {
-          })}
-        </div>
+      </div>
+      {filteredData.length !== 0 && (
+      <div className="dataResult">
+        {filteredData.slice(0, 15).map((value, key) => {
+          return <div> {value.Descricao} </div>
+        })} 
+      </div>
       )}
     </div>
   );

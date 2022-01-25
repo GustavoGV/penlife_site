@@ -1,6 +1,4 @@
-import { Input, Row, Col, Form, Button, Cascader, Select, Tooltip, Space, Typography, Menu, Dropdown } from "antd";
-
-const { Option } = Select;
+import { Input, Row, Col, Form, Button, Cascader } from "antd";
 
 export default function Body () {
     function handleFinish (a) {
@@ -17,13 +15,12 @@ export default function Body () {
             <Col span={12}
             push={6}>
                 <Form.Item
-                    required= '${label} é necessário'
                     name={['nomecompleto']}
                     label='Nome Completo'
                     rules={[{ required: true, message: 'Por favor, insira um nome' }]}
                 >
 
-                    <Input placeholder="Ex: Caio Balarin"></Input>
+                    <Input placeholder="Ex: Maria da Silva"></Input>
                 </Form.Item>
             </Col>    
         </Row>
@@ -32,12 +29,11 @@ export default function Body () {
             <Col span={12}
             push={6}>
                 <Form.Item
-                    required= '${label} é obrigatório'
                     name={['email']}
                     label='E-mail'
                     rules={[{type:'email'},{required:true, message:'Por favor, insira um email'}]}
                 >
-                    <Input placeholder="Ex: caiobalarin@penlife.com.br"></Input>
+                    <Input placeholder="Ex: mariadasilva@penlife.com.br"></Input>
                     
                 </Form.Item>
             </Col>
