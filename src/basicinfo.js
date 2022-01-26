@@ -56,15 +56,15 @@ export default function Body () {
                     label: 'Pedagógico',
                     children: [
                         {
-                            value: 'ensino infantil',
+                            value: 'ensino_infantil',
                             label: 'Ensino Infantil',
                         },
                         {
-                            value: 'ensino fundamental',
+                            value: 'ensino_fundamental',
                             label: 'Ensino Fundamental',
                         },
                         {
-                            value: 'ensino medio',
+                            value: 'ensino_medio',
                             label: 'Ensino Médio',
                         },
                     ],
