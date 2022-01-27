@@ -1,5 +1,5 @@
 import React from 'react';
-import logopen from './PENlogo.png';
+import logopen from './images/PENlogo.png';
 import './penlogo.css'
 
 console.log(logopen);

@@ -1,0 +1,331 @@
+[
+  {
+    "codigo_produto": "PEN-00001",
+    "codigo_produto_integracao": "I-00001",
+    "descricao": "Alfinete Taça",
+    "unidade": "CX",
+    "ncm": "7319.40.00"
+  },
+  {
+    "codigo_produto": "PEN-00002",
+    "codigo_produto_integracao": "I-00002",
+    "descricao": "Caixa de Clipes",
+    "unidade": "CX",
+    "ncm": "8305.90.00"
+  },
+  {
+    "codigo_produto": "PEN-00003",
+    "codigo_produto_integracao": "I-00003",
+    "descricao": "Caixa de Grampo",
+    "unidade": "CX",
+    "ncm": "8305.20.00"
+  },
+  {
+    "codigo_produto": "PEN-00004",
+    "codigo_produto_integracao": "I-00004",
+    "descricao": "Caneta Esferográfica",
+    "unidade": "UN",
+    "ncm": "9608.10.00"
+  },
+  {
+    "codigo_produto": "PEN-00005",
+    "codigo_produto_integracao": "I-00005",
+    "descricao": "Copo de Café",
+    "unidade": "UN",
+    "ncm": "3924.10.00"
+  },
+  {
+    "codigo_produto": "PEN-00006",
+    "codigo_produto_integracao": "I-00006",
+    "descricao": "Copo Plástico",
+    "unidade": "UN",
+    "ncm": "3924.10.00"
+  },
+  {
+    "codigo_produto": "PEN-00007",
+    "codigo_produto_integracao": "I-00007",
+    "descricao": "Corretivo",
+    "unidade": "UN",
+    "ncm": "3215.90.00"
+  },
+  {
+    "codigo_produto": "PEN-00008",
+    "codigo_produto_integracao": "I-00008",
+    "descricao": "Elástico de Borracha",
+    "unidade": "PCT",
+    "ncm": "4016.99.90"
+  },
+  {
+    "codigo_produto": "PEN-00009",
+    "codigo_produto_integracao": "I-00009",
+    "descricao": "Envelope Plástico A4",
+    "unidade": "PCT",
+    "ncm": "3923.29.90"
+  },
+  {
+    "codigo_produto": "PEN-00010",
+    "codigo_produto_integracao": "I-00010",
+    "descricao": "Estilete",
+    "unidade": "UN",
+    "ncm": "8211.93.90"
+  },
+  {
+    "codigo_produto": "PEN-00011",
+    "codigo_produto_integracao": "I-00011",
+    "descricao": "Filtro de Linha",
+    "unidade": "UN",
+    "ncm": "8536.30.00"
+  },
+  {
+    "codigo_produto": "PEN-00012",
+    "codigo_produto_integracao": "I-00012",
+    "descricao": "Fita Adesiva Durex",
+    "unidade": "PC",
+    "ncm": "3919.90.10"
+  },
+  {
+    "codigo_produto": "PEN-00013",
+    "codigo_produto_integracao": "I-00013",
+    "descricao": "Grampeador",
+    "unidade": "PC",
+    "ncm": "8472.90.40"
+  },
+  {
+    "codigo_produto": "PEN-00014",
+    "codigo_produto_integracao": "I-00014",
+    "descricao": "Marca Texto",
+    "unidade": "UN",
+    "ncm": "9608.20.00"
+  },
+  {
+    "codigo_produto": "PEN-00015",
+    "codigo_produto_integracao": "I-00015",
+    "descricao": "Marcador de Página",
+    "unidade": "PCT",
+    "ncm": "4820.10.00"
+  },
+  {
+    "codigo_produto": "PEN-00016",
+    "codigo_produto_integracao": "I-00016",
+    "descricao": "Pacote Grampo Trilho Plástico",
+    "unidade": "PCT",
+    "ncm": "8305.20.00"
+  },
+  {
+    "codigo_produto": "PEN-00017",
+    "codigo_produto_integracao": "I-00017",
+    "descricao": "Papel Sulfite",
+    "unidade": "PCT",
+    "ncm": "4802.56.10"
+  },
+  {
+    "codigo_produto": "PEN-00018",
+    "codigo_produto_integracao": "I-00018",
+    "descricao": "Pasta Suspensa Kraft",
+    "unidade": "CX",
+    "ncm": "4820.90.00"
+  },
+  {
+    "codigo_produto": "PEN-00019",
+    "codigo_produto_integracao": "I-00019",
+    "descricao": "Perfurador de Papel",
+    "unidade": "PC",
+    "ncm": "8472.90.40"
+  },
+  {
+    "codigo_produto": "PEN-00020",
+    "codigo_produto_integracao": "I-00020",
+    "descricao": "Post-it",
+    "unidade": "PCT",
+    "ncm": "4820.10.00"
+  },
+  {
+    "codigo_produto": "PEN-00021",
+    "codigo_produto_integracao": "I-00021",
+    "descricao": "Régua",
+    "unidade": "PC",
+    "ncm": "9017.20.00"
+  },
+  {
+    "codigo_produto": "PEN-00022",
+    "codigo_produto_integracao": "I-00022",
+    "descricao": "Suporte para Durex",
+    "unidade": "UN",
+    "ncm": "3926.10.00"
+  },
+  {
+    "codigo_produto": "PEN-00023",
+    "codigo_produto_integracao": "I-00023",
+    "descricao": "Tesoura",
+    "unidade": "PC",
+    "ncm": "8213.00.00"
+  },
+  {
+    "codigo_produto": "PEN-00024",
+    "codigo_produto_integracao": "I-00024",
+    "descricao": "Tinta Impressora",
+    "unidade": "UN",
+    "ncm": "8473.30.27"
+  },
+  {
+    "codigo_produto": "PEN-00025",
+    "codigo_produto_integracao": "I-00025",
+    "descricao": "Água Sanitária",
+    "unidade": "UN",
+    "ncm": "2828.90.11"
+  },
+  {
+    "codigo_produto": "PEN-00026",
+    "codigo_produto_integracao": "I-00026",
+    "descricao": "Álcool em Gel",
+    "unidade": "UN",
+    "ncm": "2207.20.19"
+  },
+  {
+    "codigo_produto": "PEN-00027",
+    "codigo_produto_integracao": "I-00027",
+    "descricao": "Álcool Etílico",
+    "unidade": "UN",
+    "ncm": "2207.20.10"
+  },
+  {
+    "codigo_produto": "PEN-00028",
+    "codigo_produto_integracao": "I-00028",
+    "descricao": "Aromatizador de Ambiente",
+    "unidade": "UN",
+    "ncm": "3307.49.00"
+  },
+  {
+    "codigo_produto": "PEN-00029",
+    "codigo_produto_integracao": "I-00029",
+    "descricao": "Balde",
+    "unidade": "UN",
+    "ncm": "3926.90.90"
+  },
+  {
+    "codigo_produto": "PEN-00030",
+    "codigo_produto_integracao": "I-00030",
+    "descricao": "Cloro",
+    "unidade": "UN",
+    "ncm": "2828.90.11"
+  },
+  {
+    "codigo_produto": "PEN-00005",
+    "codigo_produto_integracao": "I-00005",
+    "descricao": "Copo de Café",
+    "unidade": "UN",
+    "ncm": "3924.10.00"
+  },
+  {
+    "codigo_produto": "PEN-00006",
+    "codigo_produto_integracao": "I-00006",
+    "descricao": "Copo Plástico",
+    "unidade": "UN",
+    "ncm": "3924.10.00"
+  },
+  {
+    "codigo_produto": "PEN-00031",
+    "codigo_produto_integracao": "I-00031",
+    "descricao": "Desinfetante",
+    "unidade": "UN",
+    "ncm": "3808.94.19"
+  },
+  {
+    "codigo_produto": "PEN-00032",
+    "codigo_produto_integracao": "I-00032",
+    "descricao": "Desodorizador Sanitário",
+    "unidade": "UN",
+    "ncm": "3307.49.00"
+  },
+  {
+    "codigo_produto": "PEN-00033",
+    "codigo_produto_integracao": "I-00033",
+    "descricao": "Limpa Pisos",
+    "unidade": "UN",
+    "ncm": "3402.11.90"
+  },
+  {
+    "codigo_produto": "PEN-00034",
+    "codigo_produto_integracao": "I-00034",
+    "descricao": "Limpa Vidros",
+    "unidade": "UN",
+    "ncm": "3402.90.39"
+  },
+  {
+    "codigo_produto": "PEN-00035",
+    "codigo_produto_integracao": "I-00035",
+    "descricao": "Limpador Sanitário",
+    "unidade": "UN",
+    "ncm": "3402.20.00"
+  },
+  {
+    "codigo_produto": "PEN-00036",
+    "codigo_produto_integracao": "I-00036",
+    "descricao": "Lustra Móveis",
+    "unidade": "UN",
+    "ncm": "3405.20.00"
+  },
+  {
+    "codigo_produto": "PEN-00037",
+    "codigo_produto_integracao": "I-00037",
+    "descricao": "Luva para Limpeza",
+    "unidade": "UN",
+    "ncm": "4015.19.00"
+  },
+  {
+    "codigo_produto": "PEN-00038",
+    "codigo_produto_integracao": "I-00038",
+    "descricao": "Pá de Lixo",
+    "unidade": "UN",
+    "ncm": "3924.90.00"
+  },
+  {
+    "codigo_produto": "PEN-00039",
+    "codigo_produto_integracao": "I-00039",
+    "descricao": "Pano de Chão",
+    "unidade": "UN",
+    "ncm": "6307.10.00"
+  },
+  {
+    "codigo_produto": "PEN-00040",
+    "codigo_produto_integracao": "I-00040",
+    "descricao": "Pano de Limpeza",
+    "unidade": "UN",
+    "ncm": "6307.10.00"
+  },
+  {
+    "codigo_produto": "PEN-00041",
+    "codigo_produto_integracao": "I-00041",
+    "descricao": "Rodo",
+    "unidade": "UN",
+    "ncm": "9603.90.00"
+  },
+  {
+    "codigo_produto": "PEN-00042",
+    "codigo_produto_integracao": "I-00042",
+    "descricao": "Sabonete Espuma",
+    "unidade": "UN",
+    "ncm": "3401.30.00"
+  },
+  {
+    "codigo_produto": "PEN-00043",
+    "codigo_produto_integracao": "I-00043",
+    "descricao": "Sabonete Líquido",
+    "unidade": "UN",
+    "ncm": "3401.30.00"
+  },
+  {
+    "codigo_produto": "PEN-00044",
+    "codigo_produto_integracao": "I-00044",
+    "descricao": "Saco de Lixo",
+    "unidade": "UN",
+    "ncm": "3923.21.90"
+  },
+  {
+    "codigo_produto": "PEN-00045",
+    "CodigoIntegração": "I-00045",
+    "descricao": "Vassoura",
+    "unidade": "UN",
+    "ncm": "9603.10.00"
+  }
+]

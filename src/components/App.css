@@ -15,7 +15,7 @@ body {
 .logo {
   height: 60px;
   margin: 3px;
-  background-image: url(PENlogo.png);
+  background-image: url(images/PENlogo.png);
   background-size:contain;
   background-repeat: no-repeat;
   background-position: center;

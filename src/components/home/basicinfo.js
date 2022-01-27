@@ -1,16 +1,11 @@
 import { Input, Row, Col, Form, Button, Cascader } from "antd";
-import SearchBar from './SearchBar';
-import ProductData from './products.json'
-import mysvg from "./PENlogo.png";
-
-
-
+import { useNavigate } from "react-router-dom"
 
 export default function Body () {
     function handleFinish (a) {
         console.log(a)
     }
-    
+    let navigate = useNavigate();
     return <>
     
     <Form
@@ -94,14 +89,14 @@ export default function Body () {
         
         <Row justify="center">
             <Col>
-                <Button type="primary" htmlType="submit">
+                <Button 
+                type="primary"
+                htmlType="submit"
+                onClick={() => {
+                    navigate("/itens")
+                }}>
                 Enviar
                 </Button>
-            </Col>
-        </Row>
-        <Row justify="center">
-            <Col>
-                <SearchBar placeholder="Insira um produto..." data={ProductData}/>            
             </Col>
         </Row>
     </Form>
