@@ -1,10 +1,9 @@
 import { Layout, Menu } from 'antd';
-import {
-  UserOutlined,
-} from '@ant-design/icons';
+import { UserOutlined,   FileOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import './App.css'
 import Body from './basicinfo';
+import LogoPEN from './penlogo';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -16,7 +15,13 @@ function App () {
         <div className="logo" />
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1" icon={<UserOutlined />}>
-            Cadastro
+                Cadastro
+            </Menu.Item>
+            <Menu.Item key="2" icon={<FileOutlined />}>
+                Selecionar itens
+            </Menu.Item>
+            <Menu.Item key="3" icon={<FileOutlined />}>
+                Adicionar itens
             </Menu.Item>
         </Menu>
         </Sider>
@@ -27,6 +32,7 @@ function App () {
                     <Body />
                 </div>
             </Content>
+        <LogoPEN />
         <Footer style={{ textAlign: 'center' }}>PEN Life International School ©2022</Footer>
         </Layout>
     </Layout>

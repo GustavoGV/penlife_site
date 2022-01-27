@@ -1,5 +1,5 @@
 .ant-layout, .ant-layout * {
-    box-sizing: content-box;
+    box-sizing: border-box;
   }
 
 .ant-select-arrow {
@@ -14,7 +14,6 @@ text-rendering: optimizeLegibility;
 -moz-osx-font-smoothing: grayscale;
 position: absolute;
 top: 50%;
-right: 0px;
 width: 12px;
 height: 12px;
 margin-top: -6px;
