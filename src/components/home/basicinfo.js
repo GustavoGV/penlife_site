@@ -1,14 +1,30 @@
 import { Input, Row, Col, Form, Button, Cascader } from "antd";
 import { useNavigate } from "react-router-dom"
+import { useState } from "react";
+import SearchBar from '../itens/SearchBar.js'
+import WantAddItem from "../itens/Buttontoadd";
+import UploadImg from '../newitem/ItemRequest';
+import NewItemDescription from '../newitem/NameItemRequest';
+import { SearchOutlined } from '@ant-design/icons';
+
+
 
 export default function Body () {
     function handleFinish (a) {
         console.log(a)
     }
-    let navigate = useNavigate();
+    const [mostrar, setMostrar] = useState(true)
+    const [search, setSearch] = useState(false)
+    const [mostrarNewProduto, setMostrarNewProduto] = useState(false)
+    //let navigate = useNavigate();
     return <>
-    
-    <Form
+    <Button onClick={() => {
+        setSearch(false)
+        setMostrar(true)
+        setMostrarNewProduto(false)
+        }
+    }>Voltar</Button>
+    { mostrar ? <Form
         layout="vertical"
         onFinish={handleFinish}
     >
@@ -93,12 +109,40 @@ export default function Body () {
                 type="primary"
                 htmlType="submit"
                 onClick={() => {
-                    navigate("/itens")
+                    setMostrar(false)
+                    //navigate("/itens")
+                    setSearch(true)
                 }}>
                 Enviar
                 </Button>
             </Col>
         </Row>
-    </Form>
+    </Form> : null }
+
+    { search ? <> <SearchBar /> 
+        <Button 
+            onClick={() => {
+                //navigate("/additem")
+                setMostrarNewProduto(true)
+                setSearch(false)
+            }}
+            type="primary"
+            icon={<SearchOutlined />} 
+            size="large">
+                Clique para adicionar um item que não se encontra na lista.
+        </Button> </>: 
+    null}
+
+    {<div>
+            {mostrarNewProduto ? <Row justify="center">
+                        <Col>
+                            <UploadImg/>
+                            <NewItemDescription/>
+                        </Col>
+            </Row> : null}
+            
+            
+        </div>}
+    
     </>
 }
