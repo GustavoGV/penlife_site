@@ -92,11 +92,11 @@ function handleChange(value) {
     
   }
   const selectAfter = (
-    <Select defaultValue="USD" style={{ width: 60 }}>
-      <Option value="USD">cm</Option>
-      <Option value="EUR">dm</Option>
-      <Option value="GBP">m</Option>
-      <Option value="CNY">dam</Option>
+    <Select defaultValue="cm" style={{ width: 70 }}>
+      <Option value="cm">cm</Option>
+      <Option value="dm">dm</Option>
+      <Option value="m">m</Option>
+      <Option value="dam">dam</Option>
     </Select>
   );
   function produtoSelecionado(value) {
