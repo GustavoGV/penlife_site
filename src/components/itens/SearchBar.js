@@ -4,16 +4,21 @@ import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import { socket } from '../../socket.js'
 import { InputNumber, Button, Space } from 'antd';
-
+import NewItemDescription from "../newitem/NameItemRequest";
+import { Input } from 'antd';
+import { Select, Tag } from 'antd';
 
 function SearchBar({  data, cadastro }) {
-  
+  const { TextArea } = Input;
   //const produtos = data
   const [selecionados, setSelecionados] = useState([])
   const [produtos, setProdutos] = useState(data)
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
-
+  const [popUp, setPopUp] = useState(false)
+  const [prodEscolhido, setProdEscolhido] = useState("")
+  const [categorias, setCategorias] = useState([])
+  const { Option } = Select;
   useEffect(() => {
     socket.emit('puxarProdutos')
     socket.on('produtos', (p) => {
@@ -21,8 +26,22 @@ function SearchBar({  data, cadastro }) {
       console.log(data + ' <data')
       setProdutos(p)
     })
-    return () => socket.off('produtos')
+    socket.on('resultado', (r) => {
+      console.log(r)
+    })
+    return () => {socket.off('produtos');socket.off('resultado')}
   }, [])
+  const children = [];
+  let categ = ['Cor', 'Largura', 'Comprimento', 'Peso']
+  for (let i = 0; i < categ.length; i++) {
+    children.push(<Option key={categ[i]}>{categ[i]}</Option>);
+  } 
+
+
+function handleChange(value) {
+  console.log(`selected ${value}`);
+  setCategorias(value)
+}
   
   const handleFilter = (event) => {
     const searchWord = event.target.value;
@@ -45,18 +64,39 @@ function SearchBar({  data, cadastro }) {
     setWordEntered("");
   };
   
-  
-  function produtoSelecionado(prod) {
+  const [produtoAtual, setProdutoAtual] = useState()
+  function addProduto() {
+    let descri = document.querySelector('#descri-add').value
+    let qnt = document.querySelector('#qnt-prod').value
+    let prod = produtoAtual.descricao
+    let value = produtoAtual
+    if (qnt.length > 0){
+      setPopUp(false)
+      setSelecionados([...selecionados, {nome: prod, qnt: qnt, descri: descri, codIntProd: value.codigo_produto_integracao, codProd: value.codigo_produto}])
+    }
+    else{
+      alert('Voce precisa especificar a quantidade que deseja do item')
+    }
+  }
+
+  function produtoSelecionado(value) {
+    setProdutoAtual(value)
+    let prod = value.descricao
+    setCategorias([])
     //console.log(selecionados)
+    //popUP descriçao + qnt
     let duplicado = 0
     selecionados.forEach((item) => {
-      if(item == prod){
+      if(item.nome == prod){
         duplicado = 1
       }
     })
     if(duplicado == 0){
-      setSelecionados([...selecionados, prod])
-      console.log([...selecionados, prod])
+      setProdEscolhido(prod)
+      setPopUp(true)
+      clearInput()
+
+      
     }
     else{
       alert('O produto "' + prod + '" ja foi adicionado ao pedido')
@@ -65,7 +105,8 @@ function SearchBar({  data, cadastro }) {
 
   function removerSelecionados(item) {
     let newSelecionados = selecionados.filter((value) => {
-      return value !== item
+      console.log(value.nome + " value.nome" + item + " item")
+      return value.nome !== item.nome
     })
     console.log(newSelecionados + ' newSelecionados')
     setSelecionados(newSelecionados)
@@ -74,32 +115,35 @@ function SearchBar({  data, cadastro }) {
   function enviarPedido() {
     let nomes = document.querySelectorAll('#nome-item')
     let qnts = document.querySelectorAll('#qnt-item')
-    let dataLimite = document.querySelector('#dataLimite').value
     let pedido = []
     let qntFaltando = 0 
-    nomes.forEach((nome, index) => {
-      pedido.push({obs: nome.innerHTML, qtde: qnts[index].value})
-      if(qnts[index].value < 1){
-        qntFaltando = 1
-        alert('Para enviar o pedido adicione a quantidade do item ' + nome.innerHTML)
-      }
+    //nomes.forEach((nome, index) => {
+    selecionados.map((selecionado) => {
+      pedido.push({obs: selecionado.descri, codInt: selecionado.codIntProd, codProduto: selecionado.codProd, qtde: selecionado.qnt})//, qtde: qnts[index].innerText})
+      /*  
+      if(parseInt(qnts[index].innerText) < 1){
+          qntFaltando = 1
+          alert('Para enviar o pedido adicione a quantidade do item ' + nome.innerHTML)
+        }
+        */
     })
     if(pedido.length == 0){
       alert("Para enviar o pedido é necessário adicionar os itens desejados")
     }
-    if(dataLimite.length !== 10){
-      alert("A data esta no formato errado (ex: 13/04/1999)")
-    }
-    if((qntFaltando == 0 && pedido.length > 0) && dataLimite.length == 10){
-      socket.emit('fazerRequisicao', {itens: pedido, solicitador: cadastro.nome, email: cadastro.email, area: cadastro.area, dataUso: dataLimite})
+    
+    if((qntFaltando == 0 && pedido.length > 0)){
+      socket.emit('fazerRequisicao', {itens: pedido, solicitador: cadastro.nome, email: cadastro.email, area: cadastro.area})
       alert("Pedido enviado com sucesso")
       setSelecionados([])
     }
+
+    
     
   }
 
   return (
-    <div id='botao' className="search">
+    <>
+      <div id='botao' className="search">
       
       <div className="searchInputs">
       
@@ -122,7 +166,7 @@ function SearchBar({  data, cadastro }) {
         <div className="dataResult">
           {filteredData.slice(0, 15).map((value, key) => {
             return (
-              <a className="dataItem" href={value.link} target="_blank" onClick={() => produtoSelecionado(value.descricao)}>
+              <a className="dataItem" href={value.link} target="_blank" onClick={() => produtoSelecionado(value)}>
                 <p>{value.descricao} </p>
               </a>
             );
@@ -132,46 +176,108 @@ function SearchBar({  data, cadastro }) {
       <ul id="horizontal-list"></ul>
       <ul id="horizontal-list">
         <li>
-          Nome do item:
+          Nome do Item:
         </li>
         <li>
           Quantidade:
         </li>
+
       </ul>
       {
 
         selecionados.map((item) => {
           return (
+            <>
             <ul id="horizontal-list">
               <li>
-                <a id="nome-item">{item}</a>
+                <a id="nome-item">{item.nome}</a>
+              </li>
+              <li id="qnt-item">
+                <a>{item.qnt}</a>
               </li>
               <li>
-                <a ><input id="qnt-item"></input></a> 
+              
+                <a id="buttonRemover"><button onClick={() => removerSelecionados(item)}>Remover</button></a>
               </li>
-              <li>
-                <a><button onClick={() => removerSelecionados(item)}>Remover</button></a>
-              </li>
+              
+              
             </ul>
+
+            <ul id="horizontal-list">
+            <li>
+                Descrição: 
+              </li>
+              <li>{item.descri}</li>
+            </ul>
+            
+
+            </>
+            
+
           )
         })
       }
       <ul id="vertical-list">
         <li>
-      <Button onClick={() => {enviarPedido()}}>Enviar pedido</Button>
+      <Button size="large" type="primary" onClick={() => {enviarPedido()}}>Enviar pedido</Button>
       </li>
-      <li>Insira a data limite para a chegada dos itens:</li>
-      <li>
-      <input id="dataLimite"
-          type="text"
-          placeholder={"Ex: 13/04/1999"}
-          
-          
-        />
-        </li>
+      
         </ul>
       
-    </div>
+      </div>
+
+      {popUp ? (<>
+        
+        <div className="popup"> 
+        
+          <div className="popup-inner">
+          <Button type="primary" onClick={() => addProduto() }>Enviar</Button>
+            
+            <>
+            
+     <div className='newitemname'>
+            
+            <h1> {prodEscolhido}
+            </h1>
+            <p>Quantidade:</p>
+            <input id="qnt-prod" style={{ margin: 1 }} placeholder={"Insira a quantidade..."}></input>
+          
+        <br />
+        <p style={{ margin: 5 }}>Selecione as categorias desejadas:</p>
+        <Select
+          mode="multiple"
+          allowClear
+          style={{ width: '100%' }}
+          placeholder="Please select"
+          defaultValue={[]}
+          onChange={handleChange}
+        >
+          {children}
+        </Select>
+        <p>Descrição adicional:
+        <TextArea id="descri-add"
+        style={{height : 75}}
+        placeholder='Insira as especificações do item...
+        -
+        Ex: Cor, Modelo, Tamanho, etc...
+        -'
+        showCount 
+        maxLength={150} 
+        >
+        </TextArea>
+        </p>
+      </div>
+      {categorias.map((categoria) => {
+            return <div ><p>{categoria}</p> <input></input></div>
+          })}
+      </>
+      
+              
+          </div>
+          
+        </div>
+      </>) : null}
+    </>
   );
 }
 

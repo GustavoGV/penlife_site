@@ -23,9 +23,9 @@ function WantAddItem() {
                 //navigate("/additem")
                 setMostrar(true)
         }}
-            type="primary"
+        style={{ background: "red", borderColor: "yellow" }}
             icon={<SearchOutlined />} 
-            size="large">
+            size="small">
                 Clique para adicionar um item que não se encontra na lista.
             </Button>
         </div>

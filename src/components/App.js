@@ -26,6 +26,8 @@ function App () {
     const [aba, setAba] = useState('1')
     const [enviarCadastro, setEnviarCadastro] = useState({nome: "", email: "", area: ""})
     const [area, setArea] = useState("")
+    const [valorEmail, setValorEmail] = useState("")
+    const [valorNome, setValorNome] = useState("")
 
     function handleFinish(params) {
         
@@ -34,7 +36,27 @@ function App () {
     function validarCadastro() {
         const nome = document.querySelector('#nome-pessoa')
         const email = document.querySelector('#email')
-        setEnviarCadastro({nome: nome.value, email: email.value, area: area})
+        if(nome.value.length > 3 && area.length > 0){
+            function validateEmail(e) 
+            {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(e);
+            }
+            if(validateEmail(email.value)){
+                setEnviarCadastro({nome: nome.value, email: email.value, area: area})
+                setMostrar(false)
+                    
+                setSearch(true)
+                setAba('2')
+                setArea("")
+            }
+            else{
+                alert("Email " + email.value + " invalido")
+            }
+        }
+        else{
+            alert('Preencha corretamente os dados')
+        }
         
     }
     function areaSelect(value) {
@@ -104,7 +126,7 @@ function App () {
                     label='E-mail'
                     rules={[{type:'email'},{required:true, message:'Por favor, insira um email'}]}
                 >
-                    <Input id='email' placeholder="Ex: mariadasilva@penlife.com.br"></Input>
+                    <Input value={valorEmail} id='email' placeholder="Ex: mariadasilva@penlife.com.br"></Input>
                     
                 </Form.Item>
             </Col>
@@ -163,10 +185,6 @@ function App () {
                 type="primary"
                 htmlType="submit"
                 onClick={() => {
-                    setMostrar(false)
-                    //navigate("/itens")
-                    setSearch(true)
-                    setAba('2')
                     validarCadastro()
                 }}>
                 Prosseguir
