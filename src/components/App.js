@@ -229,6 +229,14 @@ function App () {
     {<div>
             {mostrarNewProduto ? <Row justify="center">
                         <Col>
+                        <h2 
+                            style={{
+                            textAlign:"center", 
+                            fontWeight:"800",
+                            color:"rgb(0, 33, 64)",
+                            fontSize: "50px"
+                            }}
+                            >Adicionar Item</h2>
                             <UploadImg/>
                             <NewItemDescription/>
                             <Button>Adicionar novo produto</Button>
