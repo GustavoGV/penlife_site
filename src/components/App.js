@@ -99,11 +99,35 @@ function App () {
         setAba('1')
         }
     }>Voltar</Button>
+
+    <Button id='additembutton'
+        onClick={() => {
+            //navigate("/additem")
+            setMostrarNewProduto(true)
+            setSearch(false)
+            setAba('3')
+        }}
+        type="default"
+        icon={<SearchOutlined />} 
+        size="large">
+        Requisitar item
+        </Button>
+
     <br />
     { mostrar ? <Form
         layout="vertical"
         onFinish={handleFinish}
-    >
+    > 
+        <h2 
+        style={{
+            textAlign:"center", 
+            fontWeight:"800",
+            color:"rgb(0, 33, 64)",
+            fontSize: "50px"
+            }}
+            >Cadastro</h2>
+
+        
         <Row>
             <Col span={12}
             push={6}>
@@ -187,7 +211,7 @@ function App () {
                 onClick={() => {
                     validarCadastro()
                 }}>
-                Prosseguir
+                Enviar
                 </Button>
             </Col>
         </Row>
@@ -197,18 +221,7 @@ function App () {
                 <Col>
         <SearchBar cadastro={enviarCadastro}/> 
         
-        <Button id='botao'
-            onClick={() => {
-                //navigate("/additem")
-                setMostrarNewProduto(true)
-                setSearch(false)
-                setAba('3')
-            }}
-            type="primary"
-            icon={<SearchOutlined />} 
-            size="large">
-                Adicione um item que não existe na lista
-        </Button> 
+        
         </Col>
         </Row> </>
         : null}

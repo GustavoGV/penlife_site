@@ -3,10 +3,9 @@ import "./SearchBar.css";
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import { socket } from '../../socket.js'
-import { InputNumber, Button, Space } from 'antd';
+import { InputNumber, Button, Space, Input, Select, Tag } from 'antd';
 import NewItemDescription from "../newitem/NameItemRequest";
-import { Input } from 'antd';
-import { Select, Tag } from 'antd';
+import { CloseOutlined } from "@mui/icons-material";
 
 function SearchBar({  data, cadastro }) {
   const { TextArea } = Input;
@@ -47,7 +46,7 @@ function handleChange(value) {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
     const newFilter = produtos.filter((value) => {
-      console.log(value.Descricao + " <value")
+      console.log(value.descricao + " <value")
       return value.descricao.toLowerCase().includes(searchWord.toLowerCase());
     });
     console.log(newFilter + ' newFilter')
@@ -160,11 +159,18 @@ function handleChange(value) {
     
     
   }
-
+  
   return (
     <>
-      <div id='botao' className="search">
       
+      <div id='botao' className="search">
+      <h2 style={{
+          textAlign:"center", 
+          fontWeight:"800",
+          color:"rgb(0, 33, 64)",
+          fontSize: "50px"
+          }}
+        >Requisição de Produto</h2>
       <div className="searchInputs">
       
         <input
@@ -193,16 +199,10 @@ function handleChange(value) {
           })}
         </div>
       )}
+      <div id="listadeitens">
       <ul id="horizontal-list"></ul>
-      <ul id="horizontal-list">
-        <li>
-          Nome do Item:
-        </li>
-        <li>
-          Quantidade:
-        </li>
 
-      </ul>
+      
       {
 
         selecionados.map((item) => {
@@ -213,11 +213,11 @@ function handleChange(value) {
                 <a id="nome-item">{item.nome}</a>
               </li>
               <li id="qnt-item">
-                <a>{item.qnt}</a>
+                <a>{item.qnt + " un"} </a>
               </li>
               <li>
-              
-                <a id="buttonRemover"><button onClick={() => removerSelecionados(item)}>Remover</button></a>
+               
+                <a id="buttonRemover"><Button icon={<CloseIcon />} size="large" onClick={() => removerSelecionados(item)}></Button></a>
               </li>
               
               
@@ -237,15 +237,15 @@ function handleChange(value) {
           )
         })
       }
-      <ul id="vertical-list">
-        <li>
+            </div>
+
+
       <Button size="large" type="primary" onClick={() => {enviarPedido()}}>Enviar pedido</Button>
-      </li>
-      
-        </ul>
+
       
       </div>
-
+  
+      
       {popUp ? (<>
         
         <div className="popup"> 

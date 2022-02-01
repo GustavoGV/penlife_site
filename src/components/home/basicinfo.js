@@ -28,6 +28,7 @@ export default function Body () {
         layout="vertical"
         onFinish={handleFinish}
     >
+        
         <Row>
             <Col span={12}
             push={6}>
@@ -41,7 +42,6 @@ export default function Body () {
                 </Form.Item>
             </Col>    
         </Row>
-    
         <Row>
             <Col span={12}
             push={6}>

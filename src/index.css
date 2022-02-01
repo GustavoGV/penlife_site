@@ -31,7 +31,6 @@ pointer-events: none;
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: "Nunito", sans-serif;
   }
 body {
   padding: 0;
