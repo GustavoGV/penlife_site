@@ -78,7 +78,27 @@ function handleChange(value) {
       alert('Voce precisa especificar a quantidade que deseja do item')
     }
   }
-
+  function checarMedida(categ) {
+    if(categ == "Comprimento"){
+      return true
+    }
+    else if(categ == 'Largura'){
+      return true
+    }
+    else{
+      return false
+    }
+    
+    
+  }
+  const selectAfter = (
+    <Select defaultValue="USD" style={{ width: 60 }}>
+      <Option value="USD">cm</Option>
+      <Option value="EUR">dm</Option>
+      <Option value="GBP">m</Option>
+      <Option value="CNY">dam</Option>
+    </Select>
+  );
   function produtoSelecionado(value) {
     setProdutoAtual(value)
     let prod = value.descricao
@@ -240,7 +260,7 @@ function handleChange(value) {
             <h1> {prodEscolhido}
             </h1>
             <p>Quantidade:</p>
-            <input id="qnt-prod" style={{ margin: 1 }} placeholder={"Insira a quantidade..."}></input>
+            <InputNumber id="qnt-prod" min={1} max={99} defaultValue={1} style={{ margin: 1 }} placeholder={"Insira a quantidade..."}></InputNumber>
           
         <br />
         <p style={{ margin: 5 }}>Selecione as categorias desejadas:</p>
@@ -268,7 +288,7 @@ function handleChange(value) {
         </p>
       </div>
       {categorias.map((categoria) => {
-            return <div ><p>{categoria}</p> <input></input></div>
+            return <div ><p>{categoria}</p> {checarMedida(categoria) ? <InputNumber defaultValue={1} min={1} max={99} id={categoria} addonAfter={selectAfter}></InputNumber> : <InputNumber defaultValue={1} min={1} max={99} id={categoria} ></InputNumber>}</div>
           })}
       </>
       

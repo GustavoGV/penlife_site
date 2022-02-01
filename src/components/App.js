@@ -147,8 +147,8 @@ function App () {
                     label: 'Pedagógico',
                     children: [
                         {
-                            value: 'ensino_infantil',
-                            label: 'Ensino Infantil',
+                            value: 'educação_infantil',
+                            label: 'Educação Infantil',
                         },
                         {
                             value: 'ensino_fundamental',
