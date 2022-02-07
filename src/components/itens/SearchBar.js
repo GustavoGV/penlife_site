@@ -163,12 +163,11 @@ function handleChange(value) {
   return (
     <>
       
-      <div id='botao' className="search">
+      <div id='searchbutton' className="search">
       <h2 style={{
           textAlign:"center", 
           fontWeight:"800",
           color:"rgb(0, 33, 64)",
-          fontSize: "50px"
           }}
         >Requisição de Produto</h2>
       <div className="searchInputs">
@@ -277,10 +276,7 @@ function handleChange(value) {
         <p>Descrição adicional:
         <TextArea id="descri-add"
         style={{height : 75}}
-        placeholder='Insira as especificações do item...
-        -
-        Ex: Cor, Modelo, Tamanho, etc...
-        -'
+        placeholder='Insira aqui qualquer detalhe adicional'
         showCount 
         maxLength={150} 
         >

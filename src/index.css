@@ -1,7 +1,24 @@
+h2 {
+  font-size:50px
+}
+
 .ant-layout, .ant-layout * {
     box-sizing: border-box;
   }
 
+.ant-layout-header {
+  height: 90px;
+  background:#29000000;
+  line-height: 64px;
+  background-image: url(https://cdn-bkhol.nitrocdn.com/wYCCUQdXNsicvhMtsYVeobwcjndffYtY/assets/static/optimized/rev-6fbe505/wp-content/uploads/2019/08/logo-horizontal.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+  
+.ant-layout-content{
+  margin: 0px 16px
+}
 .ant-select-arrow {
 display: inline-block;
 color: inherit;
@@ -24,6 +41,10 @@ text-align: center;
 pointer-events: none;
 }
 
+.site-layout-background{
+  padding: 24px;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 .App {
   width: 100vw;
@@ -43,3 +64,36 @@ body {
     white-space: initial;
     text-align: left;
   }
+
+@media (max-width: 550px){
+  .ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-has-trigger {
+    display: none
+  }
+  .site-layout-background{
+    padding: 0px
+  }
+  .ant-layout-content{
+    margin: 5px
+  }
+}
+
+@media (max-width: 332px){
+  #additembutton {
+    border-radius:10px;
+    float: inline-start;
+    margin-top: 20px;
+  }
+  .ant-btn {
+    border-radius:10px;
+  }
+  #botao_voltar {
+    margin-bottom: -5px;
+    float:left;
+  }
+}
+
+@media (max-width: 334px){
+  h2{
+    font-size: 15vw;
+  }
+}

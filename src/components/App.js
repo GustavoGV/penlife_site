@@ -1,5 +1,5 @@
 import { Layout, Menu, Row, Col } from 'antd';
-import { UserOutlined,   FileOutlined, InboxOutlined } from '@ant-design/icons';
+import { UserOutlined, ArrowLeftOutlined, FileOutlined, InboxOutlined } from '@ant-design/icons';
 import { useState } from 'react';
 import './App.css'
 import Body from './home/basicinfo';
@@ -8,7 +8,6 @@ import ProductData from './products.json';
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import UploadImg from './newitem/ItemRequest';
 import NewItemDescription from './newitem/NameItemRequest';
-
 import { Input, Form, Button, Cascader } from "antd";
 import { useNavigate } from "react-router-dom"
 import SearchBar from './itens/SearchBar.js'
@@ -67,7 +66,7 @@ function App () {
     return (
     <Router>
     <Layout style={{ minHeight: '100vh' }}>
-        <Sider collapsible collapsed={collapsed} onCollapse={setCollapsed}>
+        <Sider collapsible collapsed={collapsed} onCollapse={setCollapsed} breakpoint="md">
         <div className="logo" />
         <Menu theme="dark" selectedKeys={[aba]} defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1" icon={<UserOutlined />}>
@@ -83,22 +82,23 @@ function App () {
         </Sider>
         <Layout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0 }} />
-        
             <Routes>
                 <Route path="/" 
                 element={
-                <Content style={{ margin: '0 16px' }}>
-                <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+                <Content>
+                <div className="site-layout-background" style={{ minHeight: 360 }}>
                 <>
     
     
-    <Button id='botao' onClick={() => {
+    <Button id='botao_voltar' onClick={() => {
         setSearch(false)
         setMostrar(true)
         setMostrarNewProduto(false)
         setAba('1')
-        }
-    }>Voltar</Button>
+        }}
+        icon = {<ArrowLeftOutlined />}>
+        Voltar
+    </Button>
 
     <Button id='additembutton'
         onClick={() => {
@@ -113,7 +113,7 @@ function App () {
         Requisitar item
         </Button>
 
-    <br />
+
     { mostrar ? <Form
         layout="vertical"
         onFinish={handleFinish}
@@ -123,7 +123,6 @@ function App () {
             textAlign:"center", 
             fontWeight:"800",
             color:"rgb(0, 33, 64)",
-            fontSize: "50px"
             }}
             >Cadastro</h2>
 
@@ -221,13 +220,17 @@ function App () {
         </Row>
     </Form> : null }
 
-    { search ? <> <Row justify="center"> 
-                <Col>
-        <SearchBar cadastro={enviarCadastro}/> 
+    { search ? <> 
+    
+    <Form layout='vertical'>
+        <Row justify="center"> 
+            <Col>
+                <SearchBar cadastro={enviarCadastro}/> 
         
-        
-        </Col>
-        </Row> </>
+            </Col>
+        </Row>
+    </Form>
+        </>
         : null}
 
     {<div>
@@ -273,7 +276,6 @@ function App () {
                     </Row>
                 }/>
             </Routes>
-        <LogoPEN />
         <Footer style={{ textAlign: 'center' }}>PEN Life International School ©2022</Footer>
         </Layout>
     </Layout>

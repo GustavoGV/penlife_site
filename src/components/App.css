@@ -27,7 +27,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-#botao {
+#botao_voltar {
   margin: 20px;
   position: relative;
   
@@ -63,6 +63,6 @@ body {
   background: #fff;
   overflow:hidden;
   float: right;
-  margin-top: 20px;
+  margin: 20px;
 }
 

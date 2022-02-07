@@ -109,7 +109,6 @@ ul#horizontal-list li {
 
 #listadeitens{
   background:#ffffff;
-  display: grid;
   width: 350px;
   margin-top: 2px;
   margin-bottom: 5px;

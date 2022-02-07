@@ -6,8 +6,8 @@ console.log(logopen);
 
 function LogoPEN() {
   return <img 
-  height="300"
-  width="300"
+  height="auto"
+  width="30%"
   src={logopen} 
   alt="LogoPEN" />;
 }
