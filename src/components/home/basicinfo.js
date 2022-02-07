@@ -75,11 +75,11 @@ export default function Body () {
                             label: 'Ensino Infantil',
                         },
                         {
-                            value: 'ensino_fundamental',
+                            value: 'fund1',
                             label: 'Ensino Fundamental',
                         },
                         {
-                            value: 'ensino_medio',
+                            value: 'fund2_e_medio',
                             label: 'Ensino Médio',
                         },
                     ],

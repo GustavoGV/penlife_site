@@ -175,12 +175,12 @@ function App () {
                             label: 'Educação Infantil',
                         },
                         {
-                            value: 'ensino_fundamental',
-                            label: 'Ensino Fundamental',
+                            value: 'fund1',
+                            label: 'Ensino Fundamental I',
                         },
                         {
-                            value: 'ensino_medio',
-                            label: 'Ensino Médio',
+                            value: 'fund2_e_medio',
+                            label: 'Ensino Fundamental II e Médio',
                         },
                     ],
                     },
@@ -195,6 +195,10 @@ function App () {
                     {
                         value: 'manutencao',
                         label: 'Manutenção',
+                    },
+                    {
+                        value: 'esportes',
+                        label: 'Esportes',
                     },
                     ]
                     }
