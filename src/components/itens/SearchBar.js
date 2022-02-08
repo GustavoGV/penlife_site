@@ -238,10 +238,6 @@ function handleChange(value) {
       }
             </div>
 
-
-      <Button size="large" type="primary" onClick={() => {enviarPedido()}}>Enviar pedido</Button>
-
-      
       </div>
   
       
@@ -286,15 +282,21 @@ function handleChange(value) {
       {categorias.map((categoria) => {
             return <div ><p>{categoria}</p> {checarMedida(categoria) ? <InputNumber defaultValue={1} min={1} max={99} id={categoria} addonAfter={selectAfter}></InputNumber> : <InputNumber defaultValue={1} min={1} max={99} id={categoria} ></InputNumber>}</div>
           })}
+          
       </>
       
               
           </div>
           
         </div>
+        
       </>) : null}
+
+      <Button size="large" type="primary" onClick={() => {enviarPedido()}}>Enviar pedido</Button>
     </>
   );
 }
+
+
 
 export default SearchBar;

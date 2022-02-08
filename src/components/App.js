@@ -118,6 +118,8 @@ function App () {
         layout="vertical"
         onFinish={handleFinish}
     > 
+        
+        <Row id="cadastroh2">
         <h2 
         style={{
             textAlign:"center", 
@@ -125,7 +127,7 @@ function App () {
             color:"rgb(0, 33, 64)",
             }}
             >Cadastro</h2>
-
+        </Row>
         
         <Row>
             <Col span={12}
@@ -223,7 +225,7 @@ function App () {
     { search ? <> 
     
     <Form layout='vertical'>
-        <Row justify="center"> 
+        <Row id='reqrow' justify="center"> 
             <Col>
                 <SearchBar cadastro={enviarCadastro}/> 
         
@@ -234,14 +236,16 @@ function App () {
         : null}
 
     {<div>
-            {mostrarNewProduto ? <Row justify="center">
+            {mostrarNewProduto ? 
+            
+            <Row id='additemrow' 
+            justify="center">
                         <Col>
                         <h2 
                             style={{
                             textAlign:"center", 
                             fontWeight:"800",
                             color:"rgb(0, 33, 64)",
-                            fontSize: "50px"
                             }}
                             >Adicionar Item</h2>
                             <UploadImg/>
