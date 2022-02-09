@@ -247,10 +247,10 @@ function App () {
                             fontWeight:"800",
                             color:"rgb(0, 33, 64)",
                             }}
-                            >Adicionar Item</h2>
+                            >Requisitar Item</h2>
                             <UploadImg/>
                             <NewItemDescription/>
-                            <Button>Adicionar novo produto</Button>
+                            <Button>Requisitar item</Button>
                         </Col>
             </Row> : null}
             
