@@ -132,7 +132,7 @@ app.get("/sendmail", async (req,res) => {
               <hr/>
               <div class="one-col">
         
-                <h1>Pedido de Compra</h1>
+                <h1>Requisição para adicionar Item</h1>
         
                 <div id = "items">
                   <div id = 'itemname'>
@@ -150,39 +150,7 @@ app.get("/sendmail", async (req,res) => {
                     </p>
                   </div>
                   </div>
-                  <br>
-                  <div id = 'itemname'>
-                    <p>
-                      {{item2}}
-                    </p>
-                  </div>
-                  <div id = "itemqtd">
-                    <p>
-                      {{quantidade}}
-                    </p>
-                  <div id = "itemdescription">
-                    <p>
-                      {{descricao}}
-                    </p>
-                  </div>
-                  </div>
-                </div>
-                <ul id="social">
-                  <li>
-                    <a href="#" target="_blank"
-                      ><img
-                        src="https://i.ibb.co/qxMbbkJ/botao-aprovar.png"
-                        alt="botao-aprovar"
-                    /></a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank"
-                      ><img
-                        src="https://i.ibb.co/YbdVnsQ/botao-reprovar.png"
-                        alt="botao-reprovar"
-                    /></a>
-                  </li>
-                </ul>
+        
         
                 <hr id="linebottom">
         
@@ -196,7 +164,8 @@ app.get("/sendmail", async (req,res) => {
               </div>
             </div>
           </body>
-        </html>`, // html body
+        </html>
+        `, // html body
       });
     res.send('enviou');
 });
