@@ -210,20 +210,6 @@
     "ncm": "2828.90.11"
   },
   {
-    "codigo_produto": "PEN-00005",
-    "codigo_produto_integracao": "I-00005",
-    "descricao": "Copo de Café",
-    "unidade": "UN",
-    "ncm": "3924.10.00"
-  },
-  {
-    "codigo_produto": "PEN-00006",
-    "codigo_produto_integracao": "I-00006",
-    "descricao": "Copo Plástico",
-    "unidade": "UN",
-    "ncm": "3924.10.00"
-  },
-  {
     "codigo_produto": "PEN-00031",
     "codigo_produto_integracao": "I-00031",
     "descricao": "Desinfetante",
