@@ -67,7 +67,7 @@ body {
   }
 
 #cadastroh2 {
-  display: block ruby;
+  display: block;
   text-align: center;
 }
 
@@ -128,10 +128,10 @@ body {
     width: 30vw;
   }
   #reqrow {
-    display: block ruby;
+    display: block;
   }
   #additemrow {
-    display: block ruby;
+    display: block;
   }
 }
 
