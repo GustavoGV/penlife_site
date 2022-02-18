@@ -194,12 +194,12 @@ function App () {
                             label: 'Limpeza',
                     },
                     {
-                        value: 'manutencao',
-                        label: 'Manutenção',
-                    },
-                    {
                         value: 'esportes',
                         label: 'Esportes',
+                    },
+                    {
+                        value: 'eventos',
+                        label: 'Eventos',
                     },
                     ]
                     }

@@ -262,7 +262,7 @@ function handleChange(value) {
 
             <ul id="horizontal-list">
             <li>
-                Descrição adicional: 
+                Justifique seu pedido: 
               </li>
               <li>{item.descri}</li>
             </ul>
@@ -326,7 +326,7 @@ function handleChange(value) {
         <p>Descrição adicional:
         <TextArea id="descri-add"
         style={{height : 75}}
-        placeholder='Insira aqui qualquer detalhe adicional'
+        placeholder='Insira aqui uma justificativa para o pedido e qualquer detalhe adicional'
         showCount 
         maxLength={150} 
         >

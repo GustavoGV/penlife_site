@@ -92,10 +92,6 @@ export default function Body () {
                             value: 'limpeza',
                             label: 'Limpeza',
                     },
-                    {
-                        value: 'manutencao',
-                        label: 'Manutenção',
-                    },
                     ]
                     }
                     />
