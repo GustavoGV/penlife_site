@@ -31,7 +31,7 @@ function SearchBar({  data, cadastro }) {
     return () => {socket.off('produtos');socket.off('resultado')}
   }, [])
   const children = [];
-  let categ = ['Cor', 'Largura', 'Comprimento', 'Peso']
+  let categ = ['Cor', 'Tipo', 'Largura', 'Comprimento', 'Peso']
   for (let i = 0; i < categ.length; i++) {
     children.push(<Option key={categ[i]}>{categ[i]}</Option>);
   } 
@@ -74,6 +74,9 @@ function handleChange(value) {
       valorCategorias.push({categ: "Cor", valor: document.querySelector('#Cor').value, un: ''})
       console.log(document.querySelector('#Cor').value + ' <document.querySelector(#Cor).value')
     }
+    if(document.querySelector('#Tipo')){
+      valorCategorias.push({categ: "Tipo", valor: document.querySelector('#Tipo').value, un: ''})
+    }
     if(document.querySelector('#Largura')){
       valorCategorias.push({categ:"Largura", valor: document.querySelector('#Largura').value, un: largura})
     }
@@ -113,6 +116,9 @@ function handleChange(value) {
 
   function checarSeInt(categ) {
     if(categ == "Cor"){
+      return false
+    }
+    if(categ =="Tipo"){
       return false
     }
     else {

@@ -137,8 +137,86 @@ body {
 
 @media (max-width: 334px){
   h2{
-    font-size: 10vw;
+    font-size: 40px;
   }
 }
 
+@media (max-width: 248px){
+  h2{
+    font-size: 30px;
+  }
+}
 
+@media (max-width:170px){
+  
+  #additembutton {
+  line-height: 1.5715;
+  position: relative;
+  display: block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  height: 25px;
+  padding: 1px 10px;
+  font-size: 12px;
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0.85);
+  border-color: #d9d9d9;
+  background: #fff;
+  overflow: hidden;
+  float: right;
+  margin: 10px;
+    margin-top: 10px;
+}
+#botao_voltar {
+  line-height: 1.5715;
+  position: relative;
+  display: block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  height: 25px;
+  padding: 1px 10px;
+  font-size: 12px;
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0.85);
+  border-color: #d9d9d9;
+  background: #fff;
+  overflow: hidden;
+  float: right;
+  margin: 10px;
+    margin-top: 10px;
+}
+}
