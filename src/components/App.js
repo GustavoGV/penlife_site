@@ -227,7 +227,7 @@ function App () {
     <Form layout='vertical'>
         <Row id='reqrow' justify="center"> 
             <Col>
-                <SearchBar cadastro={enviarCadastro}/> 
+                <SearchBar area={area} cadastro={enviarCadastro}/> 
         
             </Col>
         </Row>
