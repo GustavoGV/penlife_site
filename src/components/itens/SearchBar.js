@@ -7,7 +7,7 @@ import { InputNumber, Button, Space, Input, Select, Tag } from 'antd';
 import NewItemDescription from "../newitem/NameItemRequest";
 import { CloseOutlined } from "@mui/icons-material";
 
-function SearchBar({  data, cadastro }) {
+function SearchBar({  data, cadastro, area }) {
   const { TextArea } = Input;
   //const produtos = data
   const [selecionados, setSelecionados] = useState([])
@@ -19,7 +19,7 @@ function SearchBar({  data, cadastro }) {
   const [categorias, setCategorias] = useState([])
   const { Option } = Select;
   useEffect(() => {
-    socket.emit('puxarProdutos')
+    socket.emit('puxarProdutos', area)
     socket.on('produtos', (p) => {
       console.log(p + ' <prodServer')
       console.log(data + ' <data')
