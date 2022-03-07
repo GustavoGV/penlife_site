@@ -100,19 +100,6 @@ function App () {
         Voltar
     </Button>
 
-    <Button id='additembutton'
-        onClick={() => {
-            //navigate("/additem")
-            setMostrarNewProduto(true)
-            setSearch(false)
-            setAba('3')
-        }}
-        type="default"
-        icon={<SearchOutlined />} 
-        size="large">
-        Requisitar item
-        </Button>
-
 
     { mostrar ? <Form
         layout="vertical"
@@ -224,6 +211,19 @@ function App () {
 
     { search ? <> 
     
+        <Button id='additembutton'
+        onClick={() => {
+            //navigate("/additem")
+            setMostrarNewProduto(true)
+            setSearch(false)
+            setAba('3')
+        }}
+        type="default"
+        icon={<SearchOutlined />} 
+        size="large">
+        Requisitar item
+        </Button>
+        
     <Form layout='vertical'>
         <Row id='reqrow' justify="center"> 
             <Col>
