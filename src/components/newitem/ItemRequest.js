@@ -47,7 +47,7 @@ class UploadImg extends React.Component {
     return (
       <>
         <Upload
-          action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+          action=" 	https://api.imgur.com/3/image"
           listType="picture-card"
           fileList={fileList}
           onPreview={this.handlePreview}

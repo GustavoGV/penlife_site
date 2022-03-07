@@ -11,26 +11,18 @@ export default function NewItemDescription () {
    
     return <>
      <div className='newitemname'>
-        <h1> Nome do Produto
-        <Input placeholder='Insira o nome do produto desejado...'
-        showCount 
-        maxLength={40} 
-        onChange={onChange}>
-        </Input>
-        </h1>
-        <br />
-        <p>Descrição do Produto
+        <h1>Descrição do Produto
         <TextArea 
-        style={{height : 139}}
-        placeholder='Insira as especificações do item...
+        id = "textoespecificacoes"
+        placeholder='Insira as o nome e especificações do item...
         -
         Ex: Cor, Tipo, Tamanho, etc...
         -'
         showCount 
-        maxLength={200} 
+        maxLength={400} 
         onChange={onChange}>
         </TextArea>
-        </p>
+        </h1>
       </div>
       </>
       

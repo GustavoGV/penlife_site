@@ -22,8 +22,8 @@ app.get("/sendmail", async (req,res) => {
     let message = await transport.sendMail({
         from: '"Fred Foo 👻" <foo@example.com>', // sender address
         to: "bar@example.com, baz@example.com", // list of receivers
-        subject: "Hello ✔", // Subject line
-        text: "Hello world?", // plain text body
+        subject: "Requisição de Item - ", // Subject line
+        text: "", // plain text body
         html: `<!DOCTYPE html>
         <html lang="en">
           <head>
