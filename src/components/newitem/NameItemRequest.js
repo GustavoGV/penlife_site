@@ -11,7 +11,6 @@ export default function NewItemDescription () {
    
     return <>
      <div className='newitemname'>
-        <h1>Descrição do Produto
         <TextArea 
         id = "textoespecificacoes"
         placeholder='Insira as o nome e especificações do item...
@@ -22,8 +21,6 @@ export default function NewItemDescription () {
         maxLength={400} 
         onChange={onChange}>
         </TextArea>
-        </h1>
       </div>
       </>
-      
 }

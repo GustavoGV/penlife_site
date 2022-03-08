@@ -248,8 +248,8 @@ function App () {
                             color:"rgb(0, 33, 64)",
                             }}
                             >Requisitar Item</h2>
-                            <UploadImg/>
                             <NewItemDescription/>
+                            <br></br>
                             <Button>Requisitar item</Button>
                         </Col>
             </Row> : null}
