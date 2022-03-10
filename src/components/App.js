@@ -1,6 +1,6 @@
 import { Layout, Menu, Row, Col } from 'antd';
 import { UserOutlined, ArrowLeftOutlined, FileOutlined, InboxOutlined } from '@ant-design/icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'
 import Body from './home/basicinfo';
 import LogoPEN from './penlogo';
@@ -27,6 +27,7 @@ function App () {
     const [area, setArea] = useState("")
     const [valorEmail, setValorEmail] = useState("")
     const [valorNome, setValorNome] = useState("")
+
 
     function handleFinish(params) {
         
@@ -159,7 +160,7 @@ function App () {
                     label: 'Pedagógico',
                     children: [
                         {
-                            value: 'educação_infantil',
+                            value: 'infantil',
                             label: 'Educação Infantil',
                         },
                         {
@@ -167,7 +168,7 @@ function App () {
                             label: 'Ensino Fundamental I',
                         },
                         {
-                            value: 'fund2_e_medio',
+                            value: 'fund2_medio',
                             label: 'Ensino Fundamental II e Médio',
                         },
                     ],
@@ -217,6 +218,7 @@ function App () {
             setMostrarNewProduto(true)
             setSearch(false)
             setAba('3')
+            setMostrar(false)
         }}
         type="default"
         icon={<SearchOutlined />} 
