@@ -16,7 +16,6 @@ function SearchBar({  data, cadastro }) {
   const [wordEntered, setWordEntered] = useState("");
   const [popUp, setPopUp] = useState(false)
   const [prodEscolhido, setProdEscolhido] = useState("")
-  const [categorias, setCategorias] = useState([])
   const { Option } = Select;
   useEffect(() => {
     socket.emit('puxarProdutos', cadastro.area)
@@ -30,17 +29,6 @@ function SearchBar({  data, cadastro }) {
     })
     return () => {socket.off('produtos');socket.off('resultado')}
   }, [])
-  const children = [];
-  let categ = ['Cor', 'Tipo', 'Largura', 'Comprimento', 'Peso']
-  for (let i = 0; i < categ.length; i++) {
-    children.push(<Option key={categ[i]}>{categ[i]}</Option>);
-  } 
-
-
-function handleChange(value) {
-  console.log(`selected ${value}`);
-  setCategorias(value)
-}
   
   const handleFilter = (event) => {
     const searchWord = event.target.value;
@@ -64,29 +52,9 @@ function handleChange(value) {
   };
   
   const [produtoAtual, setProdutoAtual] = useState()
-  const [largura, setLargura] = useState("cm")
-  const [comprimento, setComprimento] = useState("cm")
-  const [peso, setPeso] = useState("g")
+
   function addProduto() {
     // let categ = ['Cor', 'Largura', 'Comprimento', 'Peso']
-    let valorCategorias = []
-    if(document.querySelector('#Cor')){
-      valorCategorias.push({categ: "Cor", valor: document.querySelector('#Cor').value, un: ''})
-      console.log(document.querySelector('#Cor').value + ' <document.querySelector(#Cor).value')
-    }
-    if(document.querySelector('#Tipo')){
-      valorCategorias.push({categ: "Tipo", valor: document.querySelector('#Tipo').value, un: ''})
-    }
-    if(document.querySelector('#Largura')){
-      valorCategorias.push({categ:"Largura", valor: document.querySelector('#Largura').value, un: largura})
-    }
-    if(document.querySelector('#Comprimento')){
-      valorCategorias.push({categ: "Comprimento", valor: document.querySelector('#Comprimento').value, un: comprimento})
-    }
-    if(document.querySelector('#Peso')){
-      valorCategorias.push({categ: "Peso", valor: document.querySelector('#Peso').value, un: peso})
-    }
-   
 
     let descri = document.querySelector('#descri-add').value
     let qnt = document.querySelector('#qnt-prod').value
@@ -94,58 +62,17 @@ function handleChange(value) {
     let value = produtoAtual
     if (qnt.length > 0){
       setPopUp(false)
-      setSelecionados([...selecionados, {nome: prod, qnt: qnt, descri: descri, valorCategorias: valorCategorias, codIntProd: value.codigo_produto_integracao, codProd: value.codigo_produto}])
+      setSelecionados([...selecionados, {nome: prod, qnt: qnt, descri: descri, codIntProd: value.codigo_produto_integracao, codProd: value.codigo_produto}])
     }
     else{
       alert('Voce precisa especificar a quantidade que deseja do item')
     }
   }
-  function checarMedida(categ) {
-    if(categ == "Comprimento"){
-      return true
-    }
-    else if(categ == 'Largura'){
-      return true
-    }
-    else{
-      return false
-    }
-    
-    
-  }
 
-  function checarSeInt(categ) {
-    if(categ == "Cor"){
-      return false
-    }
-    if(categ =="Tipo"){
-      return false
-    }
-    else {
-      return true
-    }
-    
-  }
-
-  const selectAfter = (
-    <Select defaultValue="cm" style={{ width: 70 }} onChange={(val)=>{setComprimento(val)}}>
-      <Option value="cm" >cm</Option>
-      <Option value="dm" >dm</Option>
-      <Option value="m" >m</Option>
-      <Option value="dam" >dam</Option>
-    </Select>
-  );
-  const selectAfter2 = (
-    <Select defaultValue="g" style={{ width: 70 }} onChange={(val)=>{setPeso(val)}}>
-      <Option value="g" >g</Option>
-      <Option value="kg" >kg</Option>
-    </Select>
-  )
   function produtoSelecionado(value) {
     console.log(Object.keys(value) + ' <produtoSelecionado')
     setProdutoAtual(value)
     let prod = value.descricao
-    setCategorias([])
     //console.log(selecionados)
     //popUP descriçao + qnt
     let duplicado = 0
@@ -182,7 +109,7 @@ function handleChange(value) {
     let qntFaltando = 0 
     //nomes.forEach((nome, index) => {
     selecionados.map((selecionado) => {
-      pedido.push({categ: selecionado.valorCategorias, obs: selecionado.descri, codInt: selecionado.codIntProd, codProduto: selecionado.codProd, qtde: selecionado.qnt})//, qtde: qnts[index].innerText})
+      pedido.push({obs: selecionado.descri, codInt: selecionado.codIntProd, codProduto: selecionado.codProd, qtde: selecionado.qnt})//, qtde: qnts[index].innerText})
       /*  
       if(parseInt(qnts[index].innerText) < 1){
           qntFaltando = 1
@@ -272,23 +199,6 @@ function handleChange(value) {
               </li>
               <li>{item.descri}</li>
             </ul>
-            <ul>
-            {
-              item.valorCategorias.map((c) => {
-              
-                  return (
-                    <>
-                      <li>
-                        {c.categ + ': ' + c.valor + ' ' + c.un}
-                      </li>
-                    </>
-                  )
-                
-
-              })
-            }
-            </ul>
-            
 
             </>
             
@@ -318,17 +228,7 @@ function handleChange(value) {
             <InputNumber id="qnt-prod" min={1} max={99} defaultValue={1} style={{ margin: 1 }} placeholder={"Insira a quantidade..."}></InputNumber>
           
         <br />
-        <p style={{ margin: 5 }}>Selecione as categorias desejadas:</p>
-        <Select
-          mode="multiple"
-          allowClear
-          style={{ width: '100%' }}
-          placeholder="Please select"
-          defaultValue={[]}
-          onChange={handleChange}
-        >
-          {children}
-        </Select>
+
         <p>Descrição adicional:
         <TextArea id="descri-add"
         style={{height : 75}}
@@ -339,10 +239,7 @@ function handleChange(value) {
         </TextArea>
         </p>
       </div>
-      {categorias.map((categoria) => {
-            return <div ><p>{categoria}</p> {checarMedida(categoria) ? <InputNumber defaultValue={1} min={1} max={99} id={categoria} addonAfter={selectAfter}></InputNumber> : checarSeInt(categoria) ? <InputNumber defaultValue={1} min={1} max={99} id={categoria} addonAfter={selectAfter2}></InputNumber> : <Input id={categoria} ></Input> }</div>
-          })}
-          
+      
       </>
       
               
