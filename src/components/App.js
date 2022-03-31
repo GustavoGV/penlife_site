@@ -211,21 +211,7 @@ function App () {
     </Form> : null }
 
     { search ? <> 
-    
-        <Button id='additembutton'
-        onClick={() => {
-            //navigate("/additem")
-            setMostrarNewProduto(true)
-            setSearch(false)
-            setAba('3')
-            setMostrar(false)
-        }}
-        type="default"
-        icon={<SearchOutlined />} 
-        size="large">
-        Requisitar item
-        </Button>
-        
+
     <Form layout='vertical'>
         <Row id='reqrow' justify="center"> 
             <Col>
