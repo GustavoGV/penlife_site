@@ -3,7 +3,7 @@ import "./SearchBar.css";
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import { socket } from '../../socket.js'
-import { InputNumber, Button, Space, Input, Select, Tag } from 'antd';
+import { InputNumber, Button, Space, Input, Select, Tag, Modal, Collapse } from 'antd';
 import NewItemDescription from "../newitem/NameItemRequest";
 import { CloseOutlined } from "@mui/icons-material";
 
@@ -217,7 +217,7 @@ function SearchBar({  data, cadastro }) {
         
           <div className="popup-inner">
           <Button type="primary" onClick={() => addProduto() }>Adicionar</Button>
-            
+          <CloseIcon id="clearButtonpopup"/>
             <>
             
      <div className='newitemname'>

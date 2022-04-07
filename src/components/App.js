@@ -76,9 +76,6 @@ function App () {
             <Menu.Item key="2" icon={<FileOutlined />}>
                 Selecionar itens
             </Menu.Item>
-            <Menu.Item key="3" icon={<InboxOutlined />}>
-                Adicionar itens
-            </Menu.Item>
         </Menu>
         </Sider>
         <Layout className="site-layout">
