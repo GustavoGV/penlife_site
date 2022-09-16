@@ -57,12 +57,12 @@ function SearchBar({  data, cadastro }) {
     // let categ = ['Cor', 'Largura', 'Comprimento', 'Peso']
 
     let descri = document.querySelector('#descri-add').value
-    let qnt = document.querySelector('#qnt-prod').value
+    let qtde = document.querySelector('#qnt-prod').value
     let prod = produtoAtual.descricao
     let value = produtoAtual
-    if (qnt.length > 0){
+    if (qtde.length > 0){
       setPopUp(false)
-      setSelecionados([...selecionados, {nome: prod, qnt: qnt, descri: descri, codIntProd: value.codigo_produto_integracao, codProd: value.codigo_produto}])
+      setSelecionados([...selecionados, {nome: prod, qnt: qtde, descri: descri, codIntProd: value.codigo_integracao, codProd: value.codigo}])
     }
     else{
       alert('Voce precisa especificar a quantidade que deseja do item')
